@@ -11,7 +11,7 @@ $(document).ready(function(){
     setInterval(function() {
         blink.style.display = (blink.style.display == 'none' ? '' : 'none');
        
-    }, 1000);
+    }, 750);
 
 	
 });
@@ -26,15 +26,37 @@ $(document).ready(function(){
     setInterval(function() {
        
         blink1.style.display = (blink1.style.display == 'none' ? '' : 'none');
-    }, 1200);
+    }, 800);
 
 });
 
 
+//call step2
 
 $(document).ready( function() {
     $("#load").on("click", function() {
-        $( "#content" ).load( "fe-testing/step2.html #step_2" );
+        $( "#content" ).load( "step2.html");
+        $( "#step2" ).addClass('active');
+    });
+});
+
+
+//call step3
+
+$(document).ready( function() {
+    $("#load3").on("click", function() {
+        $( "#content" ).load( "step3.html");
+        $( "#step3" ).addClass('active');
+    });
+});
+
+
+//call step4
+
+$(document).ready( function() {
+    $("#load4").on("click", function() {
+        $( "#content" ).load( "step4.html");
+        $( "#step4" ).addClass('active');
     });
 });
 
@@ -54,4 +76,25 @@ function checkEmail() {
         document.getElementById('email_error').innerHTML = "";
         return true;
     }
+
 }
+
+
+jQuery(document).ready(function($) {
+
+  
+    var email = /^[ ]*([^@@\s]+)@@((?:[-a-z0-9]+\.)+[a-z]{2,})[ ]*$/i;
+
+
+    jQuery('input#e-mail').bind('input propertychange', function() {
+        if (email.test(jQuery(this).val())) {
+            jQuery(this).css({
+                'background': '#C2D699'
+            });
+        } else {
+            jQuery(this).css({
+                'background': '#FFC2C2'
+            });
+        }
+    });
+});

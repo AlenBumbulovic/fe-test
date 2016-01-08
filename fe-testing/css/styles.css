@@ -83,14 +83,14 @@ address a{
 }
 
 #steps ul li {
-	display: inline;
+	display: inline-block;
 
 	
 	padding: .2em 1em;
 	color: #ffffff;
-	font-size: 20px;
-	height: 60px;
-	width: 100%;
+	font-size: 15px;
+	height: 40px;
+	width: 16%;
 }
 
 
@@ -98,22 +98,32 @@ address a{
 #step1{
 	background-color: gray;
 	color: #ffffff;
+	text-align: center;
 }
 
 #step2{
 	background-color: black;
 	color: #ffffff;
+	text-align: center;
+	margin-top: 5px;
 }
 
 #step3{
 	background-color: black;
 	color: #ffffff;
+	text-align: center;
 }
 
 #step4{
 	background-color: black;
 	color: #ffffff;
+	text-align: center;
 }
+
+#step2:active{
+	background-color: grey;
+}
+
 
 #email_error{
 	font-size:15px; 
@@ -121,13 +131,18 @@ address a{
 }
 
 
-#step-back:link {
-	color:#ff0000;
-}
-#step-back:visited {
-	color:#0000ff;
-}
-#step-back:hover {
-	color:#ffcc00;
-}
+#step-back:link {color:#ff0000;}
+#step-back:visited {color:#0000ff;}
+#step-back:hover {color:#ffcc00;}
 
+.button-link {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
